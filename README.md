@@ -82,7 +82,7 @@ Using the 75/25% method to split the data for training vs. testing, 51,366 "low 
 
   <img width="703" alt="Screen Shot 2022-08-28 at 9 24 05 PM" src="https://user-images.githubusercontent.com/104115586/187116876-d39dc4f0-da3a-4255-bfee-b10701472046.png">
 
-![Uploading Screen Shot 2022-08-28 at 9.03.08 PM.png…]()
+
 
 
 ## Deliverable 2: Use the SMOTEENN algorithm to Predict Credit Risk
