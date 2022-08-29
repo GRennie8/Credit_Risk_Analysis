@@ -125,8 +125,6 @@ Compare two new `Machine Learning` models that reduce bias to predict credit ris
 
 <img width="699" alt="Screen Shot 2022-08-28 at 9 27 28 PM" src="https://user-images.githubusercontent.com/104115586/187117724-322663dd-bda9-446f-9ae7-ceff9e3d507d.png">
 
-<img width="699" alt="Screen Shot 2022-08-28 at 9 27 28 PM" src="https://user-images.githubusercontent.com/104115586/187117730-573d3f82-42d7-4e76-a2fb-3840e655d24f.png">
-
   
 
 **`EasyEnsembleClassifier Model`**, a set of classifiers where individual decisions are combined to classify new examples.
