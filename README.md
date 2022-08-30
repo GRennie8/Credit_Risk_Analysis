@@ -28,7 +28,7 @@ Using the 75/25% method to split the data for training vs. testing, 51,352 "low 
 
 **`RandomOverSampler Model`** randomly selects from the minority class and adds it to the training set until both classifications are equal. The results classified 51,352 records each as High Risk and Low Risk.
 
-!<img width="520" alt="Screen Shot 2022-08-28 at 8 43 09 PM" src="https://user-images.githubusercontent.com/104115586/187115572-b01231de-5d44-4e70-9a90-0ed16880dc2b.png">
+<img width="520" alt="Screen Shot 2022-08-28 at 8 43 09 PM" src="https://user-images.githubusercontent.com/104115586/187115572-b01231de-5d44-4e70-9a90-0ed16880dc2b.png">
 
 
   * Balanced accuracy score: 65%.
@@ -89,20 +89,24 @@ Using the 75/25% method to split the data for training vs. testing, 51,352 "low 
 
 ### Combination Sampling
 
-**`SMOTEENN (Synthetic Minority Oversampling Technique + Edited NearestNeighbors) Model`** combines aspects of both oversampling and undersampling. The model classified 68,460 records as High Risk and 62,011 as Low Risk.
+**`SMOTEENN (Synthetic Minority Oversampling Technique + Edited NearestNeighbors) Model`** combines aspects of both oversampling and undersampling. The model classified 51,351 records as High Risk and 46,389 as Low Risk.
 
-<img width="419" alt="Screen Shot 2022-08-28 at 9 15 36 PM" src="https://user-images.githubusercontent.com/104115586/187116022-36e0d606-2b10-4611-b310-56baaacfb767.png">
-  * The balanced accuracy score improved to 64.5% when using a combined sampling model.
+<img width="411" alt="Screen Shot 2022-08-30 at 4 23 03 PM" src="https://user-images.githubusercontent.com/104115586/187554249-4cc27f59-ae88-43f1-9538-0227c6ccae64.png">
 
-  <img width="354" alt="Screen Shot 2022-08-28 at 9 03 14 PM" src="https://user-images.githubusercontent.com/104115586/187117085-7d04da88-16ca-4f97-9b00-dd33079c7bab.png">
+  * The balanced accuracy score improved to 62% when using a combined sampling model.
+
+  <img width="341" alt="Screen Shot 2022-08-30 at 4 23 08 PM" src="https://user-images.githubusercontent.com/104115586/187554266-62ee97dd-d8d4-4043-ba6e-ad1c51bab109.png">
 
 
-  * The "High Risk" precision rate did not improve was only 1%, however the recall increased to 72% giving this model an F1 score of 2%.
-  * "Low Risk" still showed a precision rate of 100% with the recall at 57%.  
+
+  * The "High Risk" precision rate did not improve was only 1%, however the recall increased to 70% giving this model an F1 score of 2%.
+  * "Low Risk" still showed a precision rate of 100% with the recall at 54%.  
   
-  <img width="372" alt="Screen Shot 2022-08-28 at 9 03 19 PM" src="https://user-images.githubusercontent.com/104115586/187117109-9a58f4e8-9cf1-45e5-b9e7-f2286cfb8ed9.png">
+  <img width="376" alt="Screen Shot 2022-08-30 at 4 23 13 PM" src="https://user-images.githubusercontent.com/104115586/187554275-d6dad9a5-0abf-4df5-9467-ef9fd9d13f37.png">
 
-  <img width="707" alt="Screen Shot 2022-08-28 at 9 03 28 PM" src="https://user-images.githubusercontent.com/104115586/187117137-0d08b6a3-bde9-4e1a-83a4-2486ea08e6e6.png">
+
+  <img width="696" alt="Screen Shot 2022-08-30 at 4 23 19 PM" src="https://user-images.githubusercontent.com/104115586/187554281-e870df65-6894-4395-9cc4-a172e3910ed3.png">
+
 
 ## Deliverable 3: Use Ensemble Classifiers to Predict Credit Risk
 
@@ -113,23 +117,25 @@ Compare two new `Machine Learning` models that reduce bias to predict credit ris
 
 **`BalancedRandomForestClassifier Model`**, two trees of the same size and equal size to the minority class are constructed to represent one for the majority class and one for the minority class. 
 
-  * The balanced accuracy score increased to 78.9% for this model.
+  * The balanced accuracy score increased to 79% for this model.
 
  <img width="361" alt="Screen Shot 2022-08-28 at 9 27 18 PM" src="https://user-images.githubusercontent.com/104115586/187117684-b40b6a8e-746c-4e93-9747-cf9c1ac8d536.png">
 
 
   * The "High Risk precision rate increased to 3% with the recall at 70% giving this model an F1 score of 6%.
   * "Low Risk" still had a precision rate of 100% with the recall at 87%.  
-  * The top feature by importance was "total_rec_prncp" at 7.9% of the total.
+  *
 <img width="474" alt="Screen Shot 2022-08-28 at 9 27 23 PM" src="https://user-images.githubusercontent.com/104115586/187117714-a8c27162-38fe-4d6c-bb71-84d7d58ef947.png">
 
 <img width="699" alt="Screen Shot 2022-08-28 at 9 27 28 PM" src="https://user-images.githubusercontent.com/104115586/187117724-322663dd-bda9-446f-9ae7-ceff9e3d507d.png">
 
+ The top feature by importance was "total_rec_prncp" at 7.9% of the total.
   
+<img width="708" alt="Screen Shot 2022-08-28 at 9 27 40 PM" src="https://user-images.githubusercontent.com/104115586/187553658-91b60f98-90ff-4038-8852-283880c5b453.png">
 
 **`EasyEnsembleClassifier Model`**, a set of classifiers where individual decisions are combined to classify new examples.
 
-  * The balanced accuracy score increased to 93.2% with this model.
+  * The balanced accuracy score increased to 93% with this model.
 
   <img width="356" alt="Screen Shot 2022-08-28 at 9 27 54 PM" src="https://user-images.githubusercontent.com/104115586/187117763-3abc87cd-2374-4bbb-a51b-1a05c89b3025.png">
 
@@ -144,7 +150,7 @@ Compare two new `Machine Learning` models that reduce bias to predict credit ris
 
 # Summary
 
-In reviewing all six models, the `EasyEnsembleClassifer` model yielded the best results with an accuracy rate of 93.2% and a 9% precision rate when predicting "High Risk candidates. The sensitivity rate (aka recall) was also the highest at 92% compared to the other models. The result for predicting "Low Risk" was also the highest with the sensitivity rate at 94% and an F1 score of 97%. Therefore, if a model needed to be recommended to perform this type of analysis, then this one would be the clear choice.
+In reviewing all six models, the `EasyEnsembleClassifer` model yielded the best results with an accuracy rate of 93% and a 9% precision rate when predicting "High Risk candidates. The sensitivity rate (aka recall) was also the highest at 92% compared to the other models. The result for predicting "Low Risk" was also the highest with the sensitivity rate at 94% and an F1 score of 97%. Therefore, if a model needed to be recommended to perform this type of analysis, then this one would be the clear choice.
 
 **Ranking of models in descending order based on "High Risk" results:**
 * `EasyEnsembleClassifer`: 93.2% accuracy, 9% precision, 92% recall, and 16% F1 Score
