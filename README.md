@@ -17,7 +17,7 @@ The original dataset contained 115,675 loan applications in Q1 of 2019. We used 
 <img width="263" alt="Screen Shot 2022-08-28 at 8 42 09 PM" src="https://user-images.githubusercontent.com/104115586/187115543-b33ef22f-9b14-4307-aec4-404bdd389063.png">
 
 
-Using the 75/25% method to split the data for training vs. testing, 51,366 "low risk" and 246 "high risk" applications were categorized into the training set.   
+Using the 75/25% method to split the data for training vs. testing, 51,352 "low risk" and 260 "high risk" applications were categorized into the training set.   
 
 
 <img width="734" alt="Screen Shot 2022-08-28 at 8 42 27 PM" src="https://user-images.githubusercontent.com/104115586/187115562-1a204a77-43bf-4113-b52a-6be2d66e8128.png">
@@ -26,18 +26,18 @@ Using the 75/25% method to split the data for training vs. testing, 51,366 "low 
 
 ### Oversampling
 
-**`RandomOverSampler Model`** randomly selects from the minority class and adds it to the training set until both classifications are equal. The results classified 51,366 records each as High Risk and Low Risk.
+**`RandomOverSampler Model`** randomly selects from the minority class and adds it to the training set until both classifications are equal. The results classified 51,352 records each as High Risk and Low Risk.
 
 !<img width="520" alt="Screen Shot 2022-08-28 at 8 43 09 PM" src="https://user-images.githubusercontent.com/104115586/187115572-b01231de-5d44-4e70-9a90-0ed16880dc2b.png">
 
 
-  * Balanced accuracy score: 64%.
+  * Balanced accuracy score: 65%.
 
   <img width="440" alt="Screen Shot 2022-08-28 at 8 58 22 PM" src="https://user-images.githubusercontent.com/104115586/187115586-d937bd8c-3deb-4bbe-8ef2-a06782c35c54.png">
 
 
-  * The "High Risk" precision rate was only 1% with the recall at 66% giving this model an F1 score of 2%.
-  * "Low Risk" had a precision rate of 100% and recall at 62%.  
+  * The "High Risk" precision rate was only 1% with the recall at 61% giving this model an F1 score of 2%.
+  * "Low Risk" had a precision rate of 100% and recall at 69%.  
   
   <img width="370" alt="Screen Shot 2022-08-28 at 8 58 29 PM" src="https://user-images.githubusercontent.com/104115586/187115602-00707d14-965a-4d65-975a-e66111478e00.png">
   
@@ -49,15 +49,15 @@ Using the 75/25% method to split the data for training vs. testing, 51,366 "low 
 
   <img width="419" alt="Screen Shot 2022-08-28 at 9 15 36 PM" src="https://user-images.githubusercontent.com/104115586/187116022-36e0d606-2b10-4611-b310-56baaacfb767.png">
 
-  * The balanced accuracy score improved slightly to 65.1%.
+  * The balanced accuracy score decreased slightly to 62%.
 
   
   <img width="357" alt="Screen Shot 2022-08-28 at 8 59 09 PM" src="https://user-images.githubusercontent.com/104115586/187115658-fc859c8d-746e-4bf1-b482-2c8290215d96.png">
 
 
 
-  * Like `RandomOverSampler`, the "High Risk" precision rate again was only 1% with the recall degraded to 61% giving this model an F1 score of 2%.
-  * "Low Risk" had a precision rate of 100% and an improved recall at 69%.  
+  * Like `RandomOverSampler`, the "High Risk" precision rate again was only 1% with the recall degraded to 59% giving this model an F1 score of 2%.
+  * "Low Risk" had a precision rate of 100% and an improved recall at 65%.  
 
   <img width="372" alt="Screen Shot 2022-08-28 at 8 59 15 PM" src="https://user-images.githubusercontent.com/104115586/187115674-0a6f6542-d478-4e10-aec2-df569ccef72b.png">
 
@@ -66,17 +66,17 @@ Using the 75/25% method to split the data for training vs. testing, 51,366 "low 
 
 ### Undersampling
 
-**`ClusterCentroids Model`**, an algorithm that identifies clusters of the majority class to generate synthetic data points that are representative of the clusters. The model classified 246 records each as High Risk and Low Risk.
+**`ClusterCentroids Model`**, an algorithm that identifies clusters of the majority class to generate synthetic data points that are representative of the clusters. The model classified 260 records each as High Risk and Low Risk.
 
 <img width="387" alt="Screen Shot 2022-08-28 at 8 59 34 PM" src="https://user-images.githubusercontent.com/104115586/187115635-8619f1e6-24e6-49ca-babc-24780be1db86.png">
 
-  * Balanced accuracy score was lower than the oversampling models at 54.5%.
+  * Balanced accuracy score was lower than the oversampling models at 52%.
 
   <img width="348" alt="Screen Shot 2022-08-28 at 9 23 19 PM" src="https://user-images.githubusercontent.com/104115586/187116771-6bed19fd-73ea-4095-a3d8-564be3cc4528.png">
 
 
-  * The "High Risk" precision rate again was only at 1% with the recall at 69% giving this model an F1 score of 1%.
-  * "Low Risk" had a precision rate of 100% and with a lower recall at 40% compared to the oversampling models.  
+  * The "High Risk" precision rate again was only at 1% with the recall at 60% giving this model an F1 score of 1%.
+  * "Low Risk" had a precision rate of 100% and with a lower recall at 44% compared to the oversampling models.  
 
   <img width="371" alt="Screen Shot 2022-08-28 at 9 24 01 PM" src="https://user-images.githubusercontent.com/104115586/187116860-1a27c33b-4c4d-48e6-9c79-42b8009b1a70.png">
 
